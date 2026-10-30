@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+
+    <h1>🧾 Your Orders</h1>
+
+    {% if orders %}
+        <ul>
+            {% for item in orders %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No orders yet</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Menu</a>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery</title>
+</head>
+<body>
+
+    <h1>🍽️ Village Food Delivery</h1>
+
+    <h2>Menu</h2>
+
+    <ul>
+        {% for food in menu %}
+            <li>
+                {{ food.name }} - ₹{{ food.price }}
+
+                <form action="/order" method="POST" style="display:inline;">
+                    <input type="hidden" name="item" value="{{ food.name }}">
+                    <button type="submit">Order</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/order">View Orders</a>
+
+</body>
+</html>
